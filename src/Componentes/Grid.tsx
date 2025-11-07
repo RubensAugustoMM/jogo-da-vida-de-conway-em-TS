@@ -8,6 +8,8 @@ type GridProps = {
 };
 
 const Grid = ({numeroColunas,grid,setGrid} : GridProps) => {
+    if(!grid || !Array.isArray(grid))
+      return (<div>Grid carregando...</div>);
     return(
       <div
         style={{
